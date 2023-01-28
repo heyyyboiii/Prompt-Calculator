@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Prompt</title>
+</head>
+<body>
+
+    <div>
+        <h1 id ="result"></h1>
+    </div>
+   <script>
+    function Calculator() {
+    var operator = prompt("Choose an operator");
+    var num1 = prompt("Type first number");
+    var num2 = prompt("Type second number");
+    var operresult
+    var input = prompt("Canceled")
+
+    if(input === null){
+     operresult = "You pressed Cancel"
+    }
+    else if(operator=="1"){
+      operresult = Number(num1)+Number(num2);
+    }
+    else if(operator=="2"){
+      operresult = Number(num1)-Number(num2);
+    }
+    else if(operator=="3"){
+      operresult = Number(num1)*Number(num2);
+    }
+    else if(operator=="4"){
+      operresult = Number(num1)/Number(num2);
+    }
+    else if(operator=!null){
+      operresult = "Invalid Operation";
+    }
+    return operresult;
+    }
+    document.getElementById('result').innerHTML = Calculator();
+    </script>
+</body>
+</html>
